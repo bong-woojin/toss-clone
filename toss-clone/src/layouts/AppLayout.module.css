@@ -1,0 +1,16 @@
+.shell {
+    display: grid;
+    grid-template-columns: 1fr 360px 56px;
+    grid-template-rows: var(--gnb-h) 1fr auto;
+    grid-template-areas:
+    "gnb    aside rail"
+    "main   aside rail"
+    "ticker ticker ticker";
+    height: 100vh;
+}
+
+.gnb    { grid-area: gnb;    background: rgba(255, 0, 0, .12); }
+.main   { grid-area: main;   background: rgba(0, 200, 0, .12); overflow-y: auto; }
+.aside  { grid-area: aside;  background: rgba(0, 0, 255, .12); overflow-y: auto; }
+.rail   { grid-area: rail;   background: rgba(255, 0, 255, .12); }
+.ticker { grid-area: ticker; background: rgba(255, 180, 0, .18); height: 40px; }
